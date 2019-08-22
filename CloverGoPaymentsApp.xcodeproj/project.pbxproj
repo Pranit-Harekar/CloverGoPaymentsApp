@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64614903230F072A00EF1E24 /* CloverConnectorListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64614902230F072A00EF1E24 /* CloverConnectorListener.swift */; };
 		6472D228230EE04C0095723A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6472D227230EE04C0095723A /* AppDelegate.swift */; };
 		6472D22A230EE04C0095723A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6472D229230EE04C0095723A /* ViewController.swift */; };
 		6472D22D230EE04C0095723A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6472D22B230EE04C0095723A /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		32D30A7C43E96120918BA8F8 /* Pods-CloverGoPaymentsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloverGoPaymentsApp.release.xcconfig"; path = "Target Support Files/Pods-CloverGoPaymentsApp/Pods-CloverGoPaymentsApp.release.xcconfig"; sourceTree = "<group>"; };
+		64614902230F072A00EF1E24 /* CloverConnectorListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloverConnectorListener.swift; sourceTree = "<group>"; };
 		6472D224230EE04C0095723A /* CloverGoPaymentsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloverGoPaymentsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6472D227230EE04C0095723A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6472D229230EE04C0095723A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				6472D227230EE04C0095723A /* AppDelegate.swift */,
+				64614902230F072A00EF1E24 /* CloverConnectorListener.swift */,
 				6472D229230EE04C0095723A /* ViewController.swift */,
 				6472D22B230EE04C0095723A /* Main.storyboard */,
 				6472D22E230EE04E0095723A /* Assets.xcassets */,
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64614903230F072A00EF1E24 /* CloverConnectorListener.swift in Sources */,
 				6472D22A230EE04C0095723A /* ViewController.swift in Sources */,
 				6472D228230EE04C0095723A /* AppDelegate.swift in Sources */,
 			);
