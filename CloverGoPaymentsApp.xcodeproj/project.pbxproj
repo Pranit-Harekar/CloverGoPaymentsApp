@@ -12,9 +12,11 @@
 		6472D22D230EE04C0095723A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6472D22B230EE04C0095723A /* Main.storyboard */; };
 		6472D22F230EE04E0095723A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6472D22E230EE04E0095723A /* Assets.xcassets */; };
 		6472D232230EE04E0095723A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6472D230230EE04E0095723A /* LaunchScreen.storyboard */; };
+		B1C528ECD11EC16C95BABB3B /* Pods_CloverGoPaymentsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C757EAA6ADEBCA4AD9F1FEEC /* Pods_CloverGoPaymentsApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32D30A7C43E96120918BA8F8 /* Pods-CloverGoPaymentsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloverGoPaymentsApp.release.xcconfig"; path = "Target Support Files/Pods-CloverGoPaymentsApp/Pods-CloverGoPaymentsApp.release.xcconfig"; sourceTree = "<group>"; };
 		6472D224230EE04C0095723A /* CloverGoPaymentsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloverGoPaymentsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6472D227230EE04C0095723A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6472D229230EE04C0095723A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		6472D22E230EE04E0095723A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6472D231230EE04E0095723A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6472D233230EE04E0095723A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0F32AEA6AC308DCEEB45573 /* Pods-CloverGoPaymentsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloverGoPaymentsApp.debug.xcconfig"; path = "Target Support Files/Pods-CloverGoPaymentsApp/Pods-CloverGoPaymentsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C757EAA6ADEBCA4AD9F1FEEC /* Pods_CloverGoPaymentsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloverGoPaymentsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1C528ECD11EC16C95BABB3B /* Pods_CloverGoPaymentsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				6472D226230EE04C0095723A /* CloverGoPaymentsApp */,
 				6472D225230EE04C0095723A /* Products */,
+				CDE82AD3AD28EF7C85209A04 /* Pods */,
+				DCB65AE5837BFF9201A67EDA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = CloverGoPaymentsApp;
 			sourceTree = "<group>";
 		};
+		CDE82AD3AD28EF7C85209A04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0F32AEA6AC308DCEEB45573 /* Pods-CloverGoPaymentsApp.debug.xcconfig */,
+				32D30A7C43E96120918BA8F8 /* Pods-CloverGoPaymentsApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DCB65AE5837BFF9201A67EDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C757EAA6ADEBCA4AD9F1FEEC /* Pods_CloverGoPaymentsApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6472D236230EE04E0095723A /* Build configuration list for PBXNativeTarget "CloverGoPaymentsApp" */;
 			buildPhases = (
+				E6E20A1CAF29D9CA522B65F6 /* [CP] Check Pods Manifest.lock */,
 				6472D220230EE04C0095723A /* Sources */,
 				6472D221230EE04C0095723A /* Frameworks */,
 				6472D222230EE04C0095723A /* Resources */,
+				DBC8EDF97E332265F0D10A3E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,71 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DBC8EDF97E332265F0D10A3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CloverGoPaymentsApp/Pods-CloverGoPaymentsApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${PODS_ROOT}/CloverGoSDK/clovergoclient.framework",
+				"${PODS_ROOT}/CloverGoSDK/CloverGoReaderSDK.framework",
+				"${PODS_ROOT}/CloverGoSDK/CloverGoLogger.framework",
+				"${BUILT_PRODUCTS_DIR}/GoConnector/GoConnector.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/clovergoclient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CloverGoReaderSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CloverGoLogger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoConnector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CloverGoPaymentsApp/Pods-CloverGoPaymentsApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6E20A1CAF29D9CA522B65F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CloverGoPaymentsApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6472D220230EE04C0095723A /* Sources */ = {
@@ -213,13 +304,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -268,48 +360,53 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		6472D237230EE04E0095723A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0F32AEA6AC308DCEEB45573 /* Pods-CloverGoPaymentsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4G2SV6SWX3;
 				INFOPLIST_FILE = CloverGoPaymentsApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pranitharekar.CloverGoPaymentsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		6472D238230EE04E0095723A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32D30A7C43E96120918BA8F8 /* Pods-CloverGoPaymentsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4G2SV6SWX3;
 				INFOPLIST_FILE = CloverGoPaymentsApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pranitharekar.CloverGoPaymentsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

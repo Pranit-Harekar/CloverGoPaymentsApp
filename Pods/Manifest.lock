@@ -1,0 +1,57 @@
+PODS:
+  - Alamofire (4.7.0)
+  - CloverGoSDK (3.3.4.1):
+    - Alamofire (= 4.7.0)
+    - ObjectMapper (= 3.3)
+    - RealmSwift (= 3.10.0)
+  - GoConnector (3.3.4.2):
+    - CloverGoSDK (= 3.3.4.1)
+    - ObjectMapper (= 3.3)
+    - Starscream (= 3.0.5)
+    - SwiftyJSON (= 4.1.0)
+  - ObjectMapper (3.3.0)
+  - Realm (3.10.0):
+    - Realm/Headers (= 3.10.0)
+  - Realm/Headers (3.10.0)
+  - RealmSwift (3.10.0):
+    - Realm (= 3.10.0)
+  - Starscream (3.0.5)
+  - SwiftyJSON (4.1.0)
+
+DEPENDENCIES:
+  - GoConnector (= 3.3.4.2)
+  - Starscream (from `https://github.com/daltoniam/Starscream.git`, tag `3.0.5`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - CloverGoSDK
+    - GoConnector
+    - ObjectMapper
+    - Realm
+    - RealmSwift
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  Starscream:
+    :git: https://github.com/daltoniam/Starscream.git
+    :tag: 3.0.5
+
+CHECKOUT OPTIONS:
+  Starscream:
+    :git: https://github.com/daltoniam/Starscream.git
+    :tag: 3.0.5
+
+SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  CloverGoSDK: d09f555a7807b8fdacef9cfef760253eb9701f25
+  GoConnector: a57504401cfd65f750301f443de7ebb67dc4eda8
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  Realm: 85ab9e4f779d66f6e9ffeb118dc25b7f130c96ac
+  RealmSwift: 69121c8b86d0ae005fb779efdb10e606732e1c74
+  Starscream: ed1193190a9d5b8ef4c7079a485516954f12a3c2
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+
+PODFILE CHECKSUM: 2ec7f70dfde440fad35ea1ba97a052cd9ee6afb5
+
+COCOAPODS: 1.6.1

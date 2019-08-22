@@ -1,0 +1,5 @@
+module RUA [system] {
+    header "./RUA_BLE.framework/Headers/RUA.h"
+    header "./RUA_BLE.framework/Headers/RUAEnumerationHelper.h"
+    export *
+}

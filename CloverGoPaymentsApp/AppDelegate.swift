@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoConnector
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
