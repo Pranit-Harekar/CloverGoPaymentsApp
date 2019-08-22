@@ -1,5 +1,5 @@
 //
-//  CloverConnectorListener.swift
+//  CloverGoConnectorListener.swift
 //  CloverGoPaymentsApp
 //
 //  Created by Pranit Harekar on 8/22/19.
@@ -7,56 +7,83 @@
 //
 
 import Foundation
-import UIKit
 import GoConnector
 
-class CloverConnectorListener : NSObject, ICloverConnectorListener, ICloverGoConnectorListener, UIAlertViewDelegate {
+class CloverGoConnectorListener : ICloverGoConnectorListener {
     
-    weak var cloverConnector:ICloverConnector?
-    weak var viewController:UIViewController?
+    weak var cloverConnector: ICloverGoConnector?
+    weak var viewController: UIViewController?
     
-    init(_ cloverConnector: ICloverConnector) {
+    init(_ cloverConnector: ICloverGoConnector) {
         self.cloverConnector = cloverConnector
     }
     
     func onAidMatch(cardApplicationIdentifiers: [CLVModels.Payments.CardApplicationIdentifier]) {
-        // TODO:
+        print("onAidMatch \(cardApplicationIdentifiers)")
     }
     
     func onDevicesDiscovered(devices: [CLVModels.Device.GoDeviceInfo]) {
-        // TODO:
+        print("onDevicesDiscovered \(devices)")
+        let choiceAlert = UIAlertController(title: "Choose your reader", message: "Please select one of the reader", preferredStyle: .actionSheet)
+        for device in devices {
+            let action = UIAlertAction(title: device.deviceName, style: .default, handler: {
+                (action:UIAlertAction) in
+                ((UIApplication.shared.delegate as! AppDelegate).cloverConnector)?.connectToBluetoothDevice(deviceInfo: device)
+                
+            })
+            choiceAlert.addAction(action)
+        }
+        choiceAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {
+            (action:UIAlertAction) in
+            
+        }))
+        
+        var topController = UIApplication.shared.keyWindow!.rootViewController! as UIViewController
+        while ((topController.presentedViewController) != nil) {
+            topController = topController.presentedViewController!
+        }
+        
+        if let popoverController = choiceAlert.popoverPresentationController {
+            popoverController.sourceView = topController.view
+            popoverController.sourceRect = CGRect(x: topController.view.bounds.midX, y: topController.view.bounds.midY, width: 0, height: 0)
+        }
+        
+        topController.present(choiceAlert, animated:true, completion:nil)
+        
     }
     
     func onDeviceInitializationEvent(event: CLVModels.Device.GoDeviceInitializationEvent) {
-        // TODO:
+        print("onDeviceInitializationEvent: \(event)")
     }
     
     func onTransactionProgress(event: CLVModels.Payments.GoTransactionEvent) {
-        // TODO:
+        print("onTransactionProgress \(event)")
     }
     
     func onSignatureRequired() {
-        // TODO:
+        print("onSignatureRequired")
     }
     
     func onSendReceipt() {
-        // TODO:
+        print("onSendReceipt")
     }
     
     func onMultiplePaymentModesAvailable(paymentModes: [CLVModels.Payments.PaymentMode]) {
-        // TODO:
+        print("onMultiplePaymentModesAvailable \(paymentModes)")
     }
     
     func onKeyedCardDataRequired() {
-        // TODO:
+        print("onKeyedCardDataRequired")
     }
     
     func onRetrievePendingPaymentStats(response: RetrievePendingPaymentsStatsResponse) {
-        // TODO:
+        print("onRetrievePendingPaymentStats \(response)")
     }
     
+    /// ICloverConnector delegate methods
+    
     func onSaleResponse(_ response: SaleResponse) {
-        // TODO:
+        print("onSaleResponse \(response)")
     }
     
     func onAuthResponse(_ authResponse: AuthResponse) {
@@ -76,7 +103,7 @@ class CloverConnectorListener : NSObject, ICloverConnectorListener, ICloverGoCon
     }
     
     func onVoidPaymentResponse(_ voidPaymentResponse: VoidPaymentResponse) {
-        // TODO:
+        print("onSaleResponse \(voidPaymentResponse)")
     }
     
     func onRefundPaymentResponse(_ refundPaymentResponse: RefundPaymentResponse) {
@@ -100,27 +127,27 @@ class CloverConnectorListener : NSObject, ICloverConnectorListener, ICloverGoCon
     }
     
     func onDeviceActivityStart(_ deviceEvent: CloverDeviceEvent) {
-        // TODO:
+        print("onDeviceActivityStart \(deviceEvent)")
     }
     
     func onDeviceActivityEnd(_ deviceEvent: CloverDeviceEvent) {
-        // TODO:
+        print("onDeviceActivityEnd \(deviceEvent)")
     }
     
     func onDeviceError(_ deviceErrorEvent: CloverDeviceErrorEvent) {
-        // TODO:
+        print("onDeviceError \(deviceErrorEvent)")
     }
     
     func onDeviceConnected() {
-        // TODO:
+        print("onDeviceConnected")
     }
     
     func onDeviceReady(_ merchantInfo: MerchantInfo) {
-        // TODO:
+        print("onDeviceReady")
     }
     
     func onDeviceDisconnected() {
-        // TODO:
+        print("onDeviceDisconnected")
     }
     
     func onConfirmPaymentRequest(_ request: ConfirmPaymentRequest) {
@@ -168,7 +195,7 @@ class CloverConnectorListener : NSObject, ICloverConnectorListener, ICloverGoCon
     }
     
     func onReadCardDataResponse(_ readCardDataResponse: ReadCardDataResponse) {
-        // TODO:
+        print("onReadCardDataResponse \(readCardDataResponse)")
     }
     
     func onCustomActivityResponse(_ customActivityResponse: CustomActivityResponse) {
@@ -188,42 +215,6 @@ class CloverConnectorListener : NSObject, ICloverConnectorListener, ICloverGoCon
     }
     
     func onRetrieveDeviceStatusResponse(_ _response: RetrieveDeviceStatusResponse) {
-        // TODO:
-    }
-    
-    func onAidMatch(cardApplicationIdentifiers:[CLVModels.Payments.CardApplicationIdentifier]) -> Void {
-        // TODO:
-    }
-    
-    func onDevicesDiscovered(devices:[CLVModels.Device.GoDeviceInfo]) ->Void {
-        // TODO:
-    }
-    
-    func onDeviceInitializationEvent(event:CLVModels.Device.GoDeviceInitializationEvent) -> Void {
-        // TODO:
-    }
-    
-    func onTransactionProgress(event: CLVModels.Payments.GoTransactionEvent) -> Void {
-        // TODO:
-    }
-    
-    func onSignatureRequired() -> Void {
-        // TODO:
-    }
-    
-    func onSendReceipt() -> Void {
-        // TODO:
-    }
-    
-    func onMultiplePaymentModesAvailable(paymentModes:[CLVModels.Payments.PaymentMode]) -> Void {
-        // TODO:
-    }
-    
-    func onKeyedCardDataRequired() -> Void {
-        // TODO:
-    }
-    
-    func onRetrievePendingPaymentStats(response : RetrievePendingPaymentsStatsResponse) -> Void {
         // TODO:
     }
 }

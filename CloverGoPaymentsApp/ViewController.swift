@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onDisconnect(_ sender: Any) {
+        appDelegate?.reset()
     }
     
     

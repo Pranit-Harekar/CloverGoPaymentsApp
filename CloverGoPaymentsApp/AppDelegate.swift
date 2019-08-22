@@ -13,8 +13,8 @@ import GoConnector
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    var cloverConnector: ICloverConnector?
-    var cloverConnectorListener: CloverConnectorListener?
+    var cloverConnector: ICloverGoConnector?
+    var cloverConnectorListener: CloverGoConnectorListener?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -47,14 +47,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let accessToken = ""
         let apiKey = ""
         let secret = ""
-        
-        let config = CloverGoDeviceConfiguration.Builder(apiKey: apiKey, secret: secret, env: .sandbox).accessToken(accessToken).build()
-        
+
+        let config = CloverGoDeviceConfiguration.Builder(apiKey: apiKey, secret: secret, env: .sandbox).accessToken(accessToken).deviceType(.RP450).allowAutoConnect(true).allowDuplicateTransaction(false).enableLogs(true).build()
+
         cloverConnector = CloverGoConnector(config: config)
-        cloverConnectorListener = CloverConnectorListener(cloverConnector!)
-        cloverConnectorListener?.viewController = self.window?.rootViewController
-        (cloverConnector as? CloverGoConnector)?.addCloverGoConnectorListener(cloverConnectorListener: cloverConnectorListener!)
+        cloverConnectorListener = CloverGoConnectorListener(cloverConnector!)
+        cloverConnector!.addCloverGoConnectorListener(cloverConnectorListener: cloverConnectorListener!)
         cloverConnector!.initializeConnection()
+    }
+    
+    func reset() {
+        cloverConnector?.resetDevice()
     }
     
 }

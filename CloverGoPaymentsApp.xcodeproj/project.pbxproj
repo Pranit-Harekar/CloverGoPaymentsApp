@@ -7,18 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		64614903230F072A00EF1E24 /* CloverConnectorListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64614902230F072A00EF1E24 /* CloverConnectorListener.swift */; };
 		6472D228230EE04C0095723A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6472D227230EE04C0095723A /* AppDelegate.swift */; };
 		6472D22A230EE04C0095723A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6472D229230EE04C0095723A /* ViewController.swift */; };
 		6472D22D230EE04C0095723A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6472D22B230EE04C0095723A /* Main.storyboard */; };
 		6472D22F230EE04E0095723A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6472D22E230EE04E0095723A /* Assets.xcassets */; };
 		6472D232230EE04E0095723A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6472D230230EE04E0095723A /* LaunchScreen.storyboard */; };
+		64E4358E230F42D900A1A836 /* CloverGoConnectorListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4358D230F42D900A1A836 /* CloverGoConnectorListener.swift */; };
 		B1C528ECD11EC16C95BABB3B /* Pods_CloverGoPaymentsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C757EAA6ADEBCA4AD9F1FEEC /* Pods_CloverGoPaymentsApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		32D30A7C43E96120918BA8F8 /* Pods-CloverGoPaymentsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloverGoPaymentsApp.release.xcconfig"; path = "Target Support Files/Pods-CloverGoPaymentsApp/Pods-CloverGoPaymentsApp.release.xcconfig"; sourceTree = "<group>"; };
-		64614902230F072A00EF1E24 /* CloverConnectorListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloverConnectorListener.swift; sourceTree = "<group>"; };
 		6472D224230EE04C0095723A /* CloverGoPaymentsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloverGoPaymentsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6472D227230EE04C0095723A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6472D229230EE04C0095723A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +25,7 @@
 		6472D22E230EE04E0095723A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6472D231230EE04E0095723A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6472D233230EE04E0095723A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64E4358D230F42D900A1A836 /* CloverGoConnectorListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloverGoConnectorListener.swift; sourceTree = "<group>"; };
 		A0F32AEA6AC308DCEEB45573 /* Pods-CloverGoPaymentsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloverGoPaymentsApp.debug.xcconfig"; path = "Target Support Files/Pods-CloverGoPaymentsApp/Pods-CloverGoPaymentsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C757EAA6ADEBCA4AD9F1FEEC /* Pods_CloverGoPaymentsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloverGoPaymentsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -64,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				6472D227230EE04C0095723A /* AppDelegate.swift */,
-				64614902230F072A00EF1E24 /* CloverConnectorListener.swift */,
+				64E4358D230F42D900A1A836 /* CloverGoConnectorListener.swift */,
 				6472D229230EE04C0095723A /* ViewController.swift */,
 				6472D22B230EE04C0095723A /* Main.storyboard */,
 				6472D22E230EE04E0095723A /* Assets.xcassets */,
@@ -229,7 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64614903230F072A00EF1E24 /* CloverConnectorListener.swift in Sources */,
+				64E4358E230F42D900A1A836 /* CloverGoConnectorListener.swift in Sources */,
 				6472D22A230EE04C0095723A /* ViewController.swift in Sources */,
 				6472D228230EE04C0095723A /* AppDelegate.swift in Sources */,
 			);
@@ -315,7 +315,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -370,7 +370,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -380,13 +380,52 @@
 			baseConfigurationReference = A0F32AEA6AC308DCEEB45573 /* Pods-CloverGoPaymentsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 4G2SV6SWX3;
+				ENABLE_BITCODE = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				INFOPLIST_FILE = CloverGoPaymentsApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lstdc++",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CloverGoLogger\"",
+					"-framework",
+					"\"CloverGoReaderSDK\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoConnector\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"Realm\"",
+					"-framework",
+					"\"RealmSwift\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"Starscream\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"clovergoclient\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pranitharekar.CloverGoPaymentsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -400,13 +439,52 @@
 			baseConfigurationReference = 32D30A7C43E96120918BA8F8 /* Pods-CloverGoPaymentsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 4G2SV6SWX3;
+				ENABLE_BITCODE = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				INFOPLIST_FILE = CloverGoPaymentsApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lstdc++",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CloverGoLogger\"",
+					"-framework",
+					"\"CloverGoReaderSDK\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoConnector\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"Realm\"",
+					"-framework",
+					"\"RealmSwift\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"Starscream\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"clovergoclient\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pranitharekar.CloverGoPaymentsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
